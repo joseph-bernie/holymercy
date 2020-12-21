@@ -1,0 +1,153 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* Scroll Styles */
+
+div#marquee {
+    position: relative;
+}
+div#marquee > table#filmlist {
+    position: absolute;
+}
+
+/* Keyframe Styles */
+ @keyframes scroll {         /*name of animation, keyframes that rotate at different intervals*/
+ 0% {
+top:250px;
+}        /*0 initial key frame, start the object animation with no rotation*/
+ 100% {
+top:-4500px; /*top to bottom length of scroll*/
+}
+}
+/* Animation Styles */
+div#marquee table {                                 
+    animation: scroll 110s linear infinite;   /*__s=time of duration(cycle)*/
+}
+div#marquee:hover table {
+    animation-play-state: paused;
+}
+
+
+/* Filmography Styles */
+
+body > section > article > div#filmography {
+   -webkit-flex: 1 1 320px;
+   flex: 1 1 320px;
+   -webkit-align-self: center;
+   align-self: center;
+}
+
+div#marquee {
+ /*  background-color: rgba(0, 0, 0, 0.25);  */ 
+   height: 300px;
+   overflow:hidden;
+  /* border: rgb(151, 151, 151) 10px inset;*/
+   margin: 0px 5px;
+}
+
+body > section > article > div#filmography p {
+   font-size: 0.9em;
+   text-align: center;
+   margin: 0px 0px 10px 0px;
+}
+
+/* Table Styles */
+
+table {
+   color: rgb(231, 231, 231);
+   font-size: 0.7em; 
+   padding: 10px; 
+   height: 1100px;   
+   width: 100%;
+}
+
+table th {
+   font-size: 1.3em;
+   letter-spacing: 0.2em;
+}
+
+table td {
+   vertical-align: top;
+   padding: 4px;
+   border-left: 0px;
+   border-right: 0px;
+   border-bottom: 1px solid rgba(0,0,0,0.3);   
+   margin: 0px;
+}
+
+table tr td:first-of-type {
+   width: 40px;
+}
+
+
+
+/*image banner*/
+/*.main-banner {        /*container/banner*/
+ /*   margin: 0 auto;   /*  margin: 0 auto; center*/
+/*	width: 494px;  /*	w/h 494px	of container;*/
+/*	height: 369px;   /*369*/
+/*	background-color: opacity 0;/*background-color: opacity: 0;*/
+/*	overflow: hidden;          /*anything goes outside the container is hidden*/
+/*	position: relative;       /*child images are position: absolute*/
+	
+}
+/*.main-banner .imgban {
+	width: 100%;  /*100 fills banner%*/
+/*	height: 100%; /*100%*/
+/*	position: absolute;
+	top: 0px; /*0px*/
+/*	transition: all ease-in-out 500ms;
+	-webkit-transition: all ease-in-out 500ms;
+	-moz-transition: all ease-in-out 500ms;
+	-o-transition: all ease-in-out 500ms;
+	
+}
+/*.main-banner #imgban3 {
+	background-image: url("../img/Compass.png");  
+	background-size: cover;  /*covers entire container it is in*/
+/*	background-position: center; /* image centered within banner*/
+/*	background-repeat: no-repeat;
+	/*border-radius: 250%;*/
+	
+/*}
+.main-banner #imgban2 {
+	background-image: url("../img/Light1.png");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.main-banner #imgban1 {
+	background-image: url("../img/Web-Chior-Loft-Windows.png");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.imgbanbtn {  /*styling for both back and next buttons*/
+/*	width: 40px;
+	height: 40px;
+	background-color: opacity 0; /*#000 black*/
+/*	border-radius: 4px;
+	position: absolute;
+	top: 280px;
+	z-index: 2000; /*always on top to see the button*/
+/*	opacity: 0.8;
+	curser: pointer;
+}
+imgbanbtn:hover {
+	opacity: 0.9;
+}
+
+/*.imgbanbtn-prev {
+	left: 5px;
+	background-image: url("../thick left.png");
+	background-size: 60%;
+	background-position: center;
+	background-repeat: no-repeat;
+}*/
+/*.imgbanbtn-next {
+	right: 5px;
+	background-image: url("../thick right.png");
+	background-size: 60%;
+	background-position: center;
+	background-repeat: no-repeat;
+}
